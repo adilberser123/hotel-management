@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --black: #000000;
+    --dark: #363949;
+    --dark-blue: #364670;
+    --light: #F0F5FD;
+    --white: #FFF;
+    --grey: #999;
+    --blue: #1D92F1;
+    --light-blue: #DDEFFD;
+    --red: #D32F2F;
+    --light-red: #FECDD3;
+    --dark-green: #32a652;
+    --green: #3BC963;
+    --light-green: #E2F7E8;
+    --yellow: #FFD12C;
+    --light-yellow: #FFF8DF;
+    --dark-yellow: #FFC107;
+    --blue-btn: #1976D2;
+    --dark-blue-btn: #0D47A1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--light);
+    line-height: 1.1 !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =============== Layout Principal =============== */
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =============== Navbar =============== */
+.myNavbar {
+    background: var(--white) !important;
+    height: 90px !important;
+    padding: 0 30px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.iconsBtns-and-profile {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.icons-btns {
+    display: flex;
+    gap: 8px;
+}
+
+.icons-btns i {
+    font-size: 20px;
+    background: var(--blue-btn);
+    color: var(--white);
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.icons-btns i:hover {
+    background: var(--dark-blue-btn);
+    transform: scale(1.05);
+}
+
+.profile {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.profile:hover {
+    background-color: var(--light);
+}
+
+.profile .info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--light-blue);
+}
+
+.profile .account h5 {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 4px;
+    margin-top: 20px;
+}
+
+.profile .account p {
+    font-size: 13px;
+    color: var(--grey);
+    margin-top: 10px;
+}
+
+.profile > i {
+    font-size: 24px;
+    color: var(--dark-blue);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile > i:hover {
+    transform: rotate(180deg);
+}
+
+/* =============== Contenu Principal =============== */
+.main {
+    padding: 30px;
+    flex: 1;
+}
+
+.header h2 {
+    font-size: 24px;
+    color: var(--dark);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* =============== Table Container =============== */
+.table-main {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+    transition: all 0.3s ease;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btns-add-delete {
+    width: 330px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.for-search {
+    display: flex;
+    align-items: center;
+}
+
+/* =============== Boutons =============== */
+.btn {
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-success {
+    background-color: var(--green);
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-danger {
+    background-color: var(--red);
+    color: white;
+}
+
+.btn-danger:hover:not(.disabled) {
+    background-color: #b71c1c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-primary {
+    background-color: transparent;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--light-blue);
+}
+
+/* =============== Table =============== */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-primary {
+    background-color: var(--light-blue) !important;
+}
+
+.table th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+.table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--light);
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.table tr:hover {
+    background-color: var(--light);
+}
+
+/* =============== Badges =============== */
+.badge {
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.bg-success {
+    background-color: var(--light-green) !important;
+    color: var(--dark-green) !important;
+}
+
+.bg-danger {
+    background-color: var(--light-red) !important;
+    color: var(--red) !important;
+}
+
+/* =============== Actions =============== */
+.table-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.table-actions a {
+    color: var(--dark);
+    transition: all 0.3s ease;
+}
+
+.table-actions a.edit {
+    color: var(--blue);
+}
+
+.table-actions a.delete {
+    color: var(--red);
+}
+
+.table-actions a:hover {
+    transform: scale(1.1);
+}
+
+/* =============== État vide =============== */
+.text-muted {
+    color: var(--grey);
+    font-style: italic;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* =============== Responsive =============== */
+@media (max-width: 768px) {
+    .table-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btns-add-delete {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .for-search {
+        width: 100%;
+    }
+
+    .profile .account {
+        display: none;
+    }
+}

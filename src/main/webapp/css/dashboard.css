@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --black: #000;
+    --dark: #1B4332;
+    --dark-blue: #2D6A4F;
+    --light: #F4FBF6;
+    --white: #FFFFFF;
+    --grey: #6C757D;
+
+    --blue: #40916C;
+    --light-blue: #D8F3DC;
+
+    --red: #D32F2F;
+    --light-red: #FDE2E4;
+
+    --green: #2D6A4F;
+    --light-green: #D8F3DC;
+
+    --yellow: #95D5B2;
+    --light-yellow: #ECFDF3;
+
+    --blue-btn: #40916C;
+    --dark-blue-btn: #1B4332;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: var(--light);
+}
+
+/* ===================== LEFT SECTION ===================== */
+
+a {
+    text-decoration: none;
+}
+
+.left-section {
+    background: #F8FFF9;
+    width: 217px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 10px;
+    transition: all 0.3s ease;
+}
+
+.left-section .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* ✅ Modification ici */
+.left-section .sidebar .logo-img {
+    width: 60px;         /* ↓ Taille réduite */
+    margin: 0 auto;
+    margin-top: -70px;    /* ↑ Remontée */
+    margin-bottom: 10px;  /* ↓ Moins d'espace en bas */
+}
+
+.left-section .sidebar .item a,
+.left-section .sign-out a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 190px;
+    padding: 12px 18px;
+    border-radius: 14px;
+    border: 2px solid transparent;
+    color: var(--dark-blue);
+    transition: all 0.3s ease;
+}
+
+.left-section .sidebar .item a:hover,
+.left-section .sign-out a:hover {
+    background: var(--light-green);
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.left-section .sidebar .item a h3,
+.left-section .sign-out a h3 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.left-section .sidebar .item i,
+.left-section .sign-out i {
+    font-size: 22px;
+}
+
+/* ===================== RIGHT SECTION / NAVBAR ===================== */
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    padding: 25px;
+    background: #F8FFF9;
+}
+
+.right-section .navbar .title-welcome {
+    color: var(--dark-blue);
+}
+
+.right-section .navbar .title-welcome h2 span {
+    font-weight: normal;
+}
+
+.right-section .navbar .iconsBtns-and-profile {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-section .navbar .iconsBtns-and-profile .icons-btns {
+    display: flex;
+    gap: 8px;
+}
+
+.right-section .navbar .iconsBtns-and-profile .icons-btns i {
+    font-size: 20px;
+    background: var(--blue-btn);
+    padding: 8px;
+    color: var(--white);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-section .navbar .iconsBtns-and-profile .icons-btns i:hover {
+    background: var(--dark-blue-btn);
+}
+
+.right-section .navbar .iconsBtns-and-profile .profile {
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+.right-section .navbar .iconsBtns-and-profile .profile .info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.right-section .navbar .iconsBtns-and-profile .profile .info img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.right-section .navbar .iconsBtns-and-profile .profile .info .account h5 {
+    font-size: 15px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.right-section .navbar .iconsBtns-and-profile .profile .info .account p {
+    font-size: 13px;
+    color: var(--grey);
+}
+
+.right-section .navbar .iconsBtns-and-profile .profile > i {
+    font-size: 24px;
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+
+/* ===================== MAIN SECTION ===================== */
+
+.right-section .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.right-section .main .header {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.right-section .main .insights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 24px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.right-section .main .insights li {
+    padding: 24px;
+    background: var(--white);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    grid-gap: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.right-section .main .insights li .bx {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section .main .insights li:nth-child(1) .bx {
+    background: var(--light-blue);
+    color: var(--blue);
+}
+
+.right-section .main .insights li:nth-child(2) .bx {
+    background: var(--light-yellow);
+    color: var(--yellow);
+}
+
+.right-section .main .insights li:nth-child(3) .bx {
+    background: var(--light-green);
+    color: var(--green);
+}
+
+.right-section .main .insights li:nth-child(4) .bx {
+    background: var(--light-red);
+    color: var(--red);
+}
+
+.right-section .main .insights li .info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+.right-section .main .insights li .info p {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+.right-section .main .charts {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.right-section .main .charts .chart-doughnut,
+.right-section .main .charts .chart-bar {
+    background: var(--white);
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+/* ===== FIX 1: Fixed sidebar ===== */
+.left-section {
+    position: fixed ;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+/* Push the right section so it doesn't hide under the fixed sidebar */
+.right-section {
+    margin-left: 220px; /* adjust to match your sidebar width */
+}
+.right-section .main .insights li:hover {
+    border-left: 4px solid var(--green);
+}
+/* Active - Version corrigée */
+.left-section .sidebar .item.active a {
+    background: var(--green);
+    border: 2px solid #1B5E20;
+    box-shadow: 0 4px 12px rgba(45,106,79,0.3);
+}
+
+.left-section .sidebar .item.active a,
+.left-section .sidebar .item.active a h3,
+.left-section .sidebar .item.active a i,
+.left-section .sidebar .item.active h3,
+.left-section .sidebar .item.active i {
+    color: white !important;
+}
